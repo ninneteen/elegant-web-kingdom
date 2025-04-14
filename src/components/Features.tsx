@@ -3,33 +3,33 @@ import { CheckCircle, Code, Layout, TrendingUp, Users, Zap } from "lucide-react"
 
 const features = [
   {
-    name: "Fast & Reliable",
-    description: "Our solutions are built for speed and reliability, ensuring your business never misses a beat.",
+    name: "รวดเร็วและน่าเชื่อถือ",
+    description: "โซลูชันของเราสร้างขึ้นเพื่อความเร็วและความน่าเชื่อถือ เพื่อให้ธุรกิจของคุณไม่พลาดโอกาส",
     icon: Zap,
   },
   {
-    name: "Modern Technologies",
-    description: "We use cutting-edge technologies to deliver modern, scalable solutions for your business needs.",
+    name: "เทคโนโลยีสมัยใหม่",
+    description: "เราใช้เทคโนโลยีล้ำสมัยเพื่อส่งมอบโซลูชันที่ขยายตัวได้ตามความต้องการของธุรกิจคุณ",
     icon: Code,
   },
   {
-    name: "Beautiful Design",
-    description: "Stunning user interfaces that not only look good but also enhance the user experience.",
+    name: "การออกแบบสวยงาม",
+    description: "อินเตอร์เฟซผู้ใช้ที่สวยงามและเพิ่มประสบการณ์การใช้งาน",
     icon: Layout,
   },
   {
-    name: "Data-Driven",
-    description: "Make informed decisions with comprehensive analytics and reporting tools.",
+    name: "ขับเคลื่อนด้วยข้อมูล",
+    description: "ตัดสินใจอย่างชาญฉลาดด้วยเครื่องมือวิเคราะห์และรายงานที่ครอบคลุม",
     icon: TrendingUp,
   },
   {
-    name: "Team Collaboration",
-    description: "Tools designed to improve team productivity and collaboration across your organization.",
+    name: "การทำงานร่วมกันเป็นทีม",
+    description: "เครื่องมือที่ออกแบบมาเพื่อเพิ่มผลผลิตและความร่วมมือของทีม",
     icon: Users,
   },
   {
-    name: "24/7 Support",
-    description: "Round-the-clock support to ensure your business operations run smoothly at all times.",
+    name: "สนับสนุน 24/7",
+    description: "การสนับสนุนตลอด 24 ชั่วโมงเพื่อให้การดำเนินธุรกิจของคุณราบรื่นตลอดเวลา",
     icon: CheckCircle,
   },
 ];

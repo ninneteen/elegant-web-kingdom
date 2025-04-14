@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
@@ -21,19 +20,19 @@ const Hero = () => {
           <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
             <div className="sm:text-center lg:text-left">
               <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl animate-fadeUp">
-                <span className="block xl:inline">Innovative Solutions for</span>{" "}
+                <span className="block xl:inline">โซลูชันนวัตกรรมสำหรับ</span>{" "}
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary xl:inline delay-200 animate-fadeUp">
-                  Your Business
+                  ธุรกิจของคุณ
                 </span>
               </h1>
               <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0 delay-300 animate-fadeUp">
-                We help businesses thrive in the digital age with cutting-edge technology solutions, innovative strategies, and exceptional service.
+                เราช่วยให้ธุรกิจเติบโตในยุคดิจิทัลด้วยโซลูชันเทคโนโลยีล้ำสมัย กลยุทธ์นวัตกรรม และบริการที่เป็นเลิศ
               </p>
               <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start delay-400 animate-fadeUp">
                 <div className="rounded-md shadow">
                   <Link to="/contact">
                     <Button className="w-full flex items-center justify-center px-8 py-3 md:py-4 md:text-lg bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90">
-                      Get Started
+                      เริ่มต้นใช้งาน
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </Link>
@@ -41,7 +40,7 @@ const Hero = () => {
                 <div className="mt-3 sm:mt-0 sm:ml-3">
                   <Link to="/about">
                     <Button variant="outline" className="w-full flex items-center justify-center px-8 py-3 md:py-4 md:text-lg">
-                      Learn More
+                      เรียนรู้เพิ่มเติม
                     </Button>
                   </Link>
                 </div>
