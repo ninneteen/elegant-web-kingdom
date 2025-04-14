@@ -4,30 +4,30 @@ import { Star } from "lucide-react";
 const testimonials = [
   {
     id: 1,
-    content: "Working with this company has transformed our business. Their innovative solutions helped us increase revenue by 40% in just six months.",
+    content: "การทำงานร่วมกับบริษัทนี้ได้เปลี่ยนแปลงธุรกิจของเรา โซลูชันที่เป็นนวัตกรรมของพวกเขาช่วยให้เราเพิ่มรายได้ 40% ในเวลาเพียงหกเดือน",
     author: {
-      name: "Sarah Johnson",
-      role: "CEO, TechStart Inc.",
+      name: "สราภา จันทร์สุข",
+      role: "ซีอีโอ, เทคสตาร์ท จำกัด",
       imageUrl: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
     },
     rating: 5,
   },
   {
     id: 2,
-    content: "The team delivered beyond our expectations. Their attention to detail and commitment to quality is unmatched in the industry.",
+    content: "ทีมส่งมอบผลงานเกินความคาดหวังของเรา ความใส่ใจในรายละเอียดและความมุ่งมั่นในคุณภาพของพวกเขาไม่มีใครเทียบได้ในอุตสาหกรรมนี้",
     author: {
-      name: "Michael Chen",
-      role: "CTO, Innovate Solutions",
+      name: "มนัส ชินวงศ์",
+      role: "ซีทีโอ, อินโนเวท โซลูชันส์",
       imageUrl: "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
     },
     rating: 5,
   },
   {
     id: 3,
-    content: "Their customer service is outstanding. Any issues we encountered were resolved promptly and professionally.",
+    content: "การบริการลูกค้าของพวกเขาโดดเด่นมาก ปัญหาทุกอย่างที่เราพบได้รับการแก้ไขอย่างรวดเร็วและมืออาชีพ",
     author: {
-      name: "Emily Rodriguez",
-      role: "Marketing Director, Global Brands",
+      name: "เอมิกา รักษ์วงศ์",
+      role: "ผู้อำนวยการฝ่ายการตลาด, โกลบอล แบรนด์ส",
       imageUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
     },
     rating: 4,
@@ -40,10 +40,10 @@ const Testimonials = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-            What our clients say
+            ลูกค้าของเราพูดอย่างไร
           </h2>
           <p className="mt-4 text-xl text-gray-500 max-w-2xl mx-auto">
-            Don't just take our word for it - hear from some of our satisfied clients.
+            อย่าเชื่อเพียงแค่คำพูดของเรา - ฟังจากลูกค้าที่พึงพอใจของเรา
           </p>
         </div>
         

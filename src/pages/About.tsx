@@ -3,50 +3,50 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 const stats = [
-  { label: "Founded", value: "2018" },
-  { label: "Employees", value: "120+" },
-  { label: "Clients", value: "500+" },
-  { label: "Countries", value: "12" },
+  { label: "ก่อตั้ง", value: "2018" },
+  { label: "พนักงาน", value: "120+" },
+  { label: "ลูกค้า", value: "500+" },
+  { label: "ประเทศ", value: "12" },
 ];
 
 const values = [
   {
-    name: "Innovation",
-    description: "We constantly push the boundaries to create cutting-edge solutions that keep our clients ahead of the curve.",
+    name: "นวัตกรรม",
+    description: "เราผลักดันขอบเขตอย่างต่อเนื่องเพื่อสร้างโซลูชันล้ำสมัยที่ช่วยให้ลูกค้าของเราอยู่เหนือคู่แข่ง",
   },
   {
-    name: "Excellence",
-    description: "We are committed to delivering exceptional quality in everything we do, from product development to customer service.",
+    name: "ความเป็นเลิศ",
+    description: "เรามุ่งมั่นที่จะส่งมอบคุณภาพที่โดดเด่นในทุกสิ่งที่เราทำ ตั้งแต่การพัฒนาผลิตภัณฑ์ไปจนถึงการบริการลูกค้า",
   },
   {
-    name: "Integrity",
-    description: "We operate with transparency and honesty, building trust with our clients, partners, and team members.",
+    name: "ความซื่อสัตย์",
+    description: "เราดำเนินงานด้วยความโปร่งใสและซื่อสัตย์ สร้างความไว้วางใจกับลูกค้า พันธมิตร และสมาชิกในทีม",
   },
   {
-    name: "Collaboration",
-    description: "We believe in the power of teamwork, both within our company and in partnership with our clients.",
+    name: "ความร่วมมือ",
+    description: "เราเชื่อในพลังของการทำงานเป็นทีม ทั้งภายในบริษัทของเราและในการเป็นพันธมิตรกับลูกค้าของเรา",
   },
 ];
 
 const team = [
   {
-    name: "John Smith",
-    role: "CEO & Founder",
+    name: "สมชาย สุขสันต์",
+    role: "ซีอีโอ & ผู้ก่อตั้ง",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
   },
   {
-    name: "Lisa Chen",
-    role: "CTO",
+    name: "ลิสา เฉิน",
+    role: "ซีทีโอ",
     image: "https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
   },
   {
-    name: "Robert Johnson",
-    role: "Head of Design",
+    name: "รุ่งโรจน์ จรัสแสง",
+    role: "หัวหน้าฝ่ายออกแบบ",
     image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
   },
   {
-    name: "Maria Garcia",
-    role: "Head of Marketing",
+    name: "มาเรีย การ์เซีย",
+    role: "หัวหน้าฝ่ายการตลาด",
     image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
   },
 ];
@@ -57,12 +57,12 @@ const About = () => {
       <div className="bg-white py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-base font-semibold text-primary tracking-wide uppercase">About Us</h2>
+            <h2 className="text-base font-semibold text-primary tracking-wide uppercase">เกี่ยวกับเรา</h2>
             <p className="mt-1 text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">
-              Our mission is to empower businesses
+              ภารกิจของเราคือการเสริมพลังให้ธุรกิจ
             </p>
             <p className="max-w-xl mt-5 mx-auto text-xl text-gray-500">
-              We create innovative solutions that help businesses thrive in the digital age.
+              เราสร้างโซลูชันนวัตกรรมที่ช่วยให้ธุรกิจเติบโตในยุคดิจิทัล
             </p>
           </div>
         </div>
@@ -73,25 +73,25 @@ const About = () => {
           <div className="lg:grid lg:grid-cols-2 lg:gap-8">
             <div>
               <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-                Our Story
+                เรื่องราวของเรา
               </h2>
               <p className="mt-4 text-lg text-gray-500">
-                Founded in 2018, our company began with a simple vision: to help businesses navigate the complex digital landscape. 
-                What started as a small team of passionate innovators has grown into a global company serving clients across various industries.
+                ก่อตั้งในปี 2018 บริษัทของเราเริ่มต้นด้วยวิสัยทัศน์ที่เรียบง่าย: ช่วยให้ธุรกิจนำทางในภูมิทัศน์ดิจิทัลที่ซับซ้อน
+                สิ่งที่เริ่มต้นจากทีมนักนวัตกรรมที่มีใจรักเล็กๆ ได้เติบโตเป็นบริษัทระดับโลกที่ให้บริการลูกค้าในหลากหลายอุตสาหกรรม
               </p>
               <p className="mt-4 text-lg text-gray-500">
-                Our journey has been marked by continuous growth and adaptation to emerging technologies and market trends. 
-                Through dedication, expertise, and a commitment to excellence, we have established ourselves as a trusted partner for businesses worldwide.
+                การเดินทางของเราเต็มไปด้วยการเติบโตอย่างต่อเนื่องและการปรับตัวให้เข้ากับเทคโนโลยีที่เกิดขึ้นใหม่และแนวโน้มของตลาด
+                ด้วยความทุ่มเท ความเชี่ยวชาญ และความมุ่งมั่นสู่ความเป็นเลิศ เราได้สร้างตัวเองให้เป็นพันธมิตรที่น่าเชื่อถือสำหรับธุรกิจทั่วโลก
               </p>
               <p className="mt-4 text-lg text-gray-500">
-                Today, we continue to expand our horizons, embrace new challenges, and develop cutting-edge solutions that drive our clients' success.
+                ในวันนี้ เรายังคงขยายขอบเขต รับมือกับความท้าทายใหม่ๆ และพัฒนาโซลูชันล้ำสมัยที่ขับเคลื่อนความสำเร็จของลูกค้าของเรา
               </p>
             </div>
             <div className="mt-10 lg:mt-0">
               <div className="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
                 <img
                   src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
-                  alt="Team meeting"
+                  alt="การประชุมทีม"
                   className="object-cover object-center"
                 />
               </div>
@@ -99,14 +99,14 @@ const About = () => {
                 <div className="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
                   <img
                     src="https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
-                    alt="Office space"
+                    alt="พื้นที่สำนักงาน"
                     className="object-cover object-center"
                   />
                 </div>
                 <div className="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
                   <img
                     src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
-                    alt="Team collaboration"
+                    alt="การทำงานร่วมกันของทีม"
                     className="object-cover object-center"
                   />
                 </div>
@@ -120,10 +120,10 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-              Company Statistics
+              สถิติบริษัท
             </h2>
             <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
-              Our growth over the years reflects our commitment to excellence.
+              การเติบโตของเราตลอดหลายปีที่ผ่านมาสะท้อนถึงความมุ่งมั่นสู่ความเป็นเลิศ
             </p>
           </div>
           <div className="mt-10">
@@ -142,12 +142,12 @@ const About = () => {
       <div className="bg-white py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:text-center">
-            <h2 className="text-base text-primary font-semibold tracking-wide uppercase">Our Values</h2>
+            <h2 className="text-base text-primary font-semibold tracking-wide uppercase">ค่านิยมของเรา</h2>
             <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-              What we stand for
+              สิ่งที่เรายืนหยัด
             </p>
             <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-              Our core values guide everything we do, from how we develop products to how we interact with our clients and team members.
+              ค่านิยมหลักของเราเป็นแนวทางในทุกสิ่งที่เราทำ ตั้งแต่วิธีที่เราพัฒนาผลิตภัณฑ์ไปจนถึงวิธีที่เราปฏิสัมพันธ์กับลูกค้าและสมาชิกในทีม
             </p>
           </div>
 
@@ -175,10 +175,10 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-              Our Leadership Team
+              ทีมผู้นำของเรา
             </h2>
             <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
-              Meet the people who lead our company to success.
+              พบกับผู้คนที่นำพาบริษัทของเราไปสู่ความสำเร็จ
             </p>
           </div>
           <div className="mt-12 grid gap-8 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2">
@@ -203,15 +203,15 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
-              Join Our Team
+              ร่วมงานกับเรา
             </h2>
             <p className="mt-4 max-w-2xl mx-auto text-xl text-white opacity-90">
-              We're always looking for talented individuals to join our team.
+              เรามองหาบุคลากรที่มีความสามารถเสมอเพื่อเข้าร่วมทีมของเรา
             </p>
             <div className="mt-8 flex justify-center">
               <Link to="/contact">
                 <Button variant="secondary" className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm bg-white text-primary hover:bg-gray-100">
-                  Contact Us
+                  ติดต่อเรา
                 </Button>
               </Link>
             </div>

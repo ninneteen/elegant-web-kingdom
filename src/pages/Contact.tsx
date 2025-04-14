@@ -5,23 +5,23 @@ import { MapPin, Phone, Mail, Clock } from "lucide-react";
 const contactInfo = [
   {
     icon: MapPin,
-    title: "Our Location",
-    details: ["123 Business Avenue", "Digital District, 10110"],
+    title: "ที่ตั้งของเรา",
+    details: ["123 ถนนธุรกิจ", "ย่านดิจิทัล, 10110"],
   },
   {
     icon: Phone,
-    title: "Phone Number",
+    title: "เบอร์โทรศัพท์",
     details: ["+66 2 123 4567", "+66 2 765 4321"],
   },
   {
     icon: Mail,
-    title: "Email",
+    title: "อีเมล",
     details: ["contact@companyname.com", "support@companyname.com"],
   },
   {
     icon: Clock,
-    title: "Working Hours",
-    details: ["Monday-Friday: 9AM - 6PM", "Saturday: 9AM - 1PM"],
+    title: "เวลาทำการ",
+    details: ["จันทร์-ศุกร์: 9.00-18.00 น.", "เสาร์: 9.00-13.00 น."],
   },
 ];
 
@@ -31,12 +31,12 @@ const Contact = () => {
       <div className="bg-white py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-base font-semibold text-primary tracking-wide uppercase">Contact Us</h2>
+            <h2 className="text-base font-semibold text-primary tracking-wide uppercase">ติดต่อเรา</h2>
             <p className="mt-1 text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">
-              Get in Touch
+              ติดต่อสอบถาม
             </p>
             <p className="max-w-xl mt-5 mx-auto text-xl text-gray-500">
-              Have questions or want to learn more about our services? We're here to help.
+              มีคำถามหรือต้องการเรียนรู้เพิ่มเติมเกี่ยวกับบริการของเรา? เรายินดีให้ความช่วยเหลือ
             </p>
           </div>
         </div>
@@ -46,7 +46,7 @@ const Contact = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           <div className="lg:col-span-1">
             <div className="bg-gray-50 rounded-lg p-8 shadow-sm">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">ข้อมูลการติดต่อ</h3>
               <div className="space-y-8">
                 {contactInfo.map((item, index) => (
                   <div key={index} className="flex items-start">
@@ -68,7 +68,7 @@ const Contact = () => {
               </div>
               
               <div className="mt-10">
-                <h4 className="text-lg font-medium text-gray-900 mb-4">Follow Us</h4>
+                <h4 className="text-lg font-medium text-gray-900 mb-4">ติดตามเรา</h4>
                 <div className="flex space-x-4">
                   <a
                     href="#"
@@ -125,7 +125,7 @@ const Contact = () => {
           
           <div className="lg:col-span-2">
             <div className="bg-white rounded-lg p-8 shadow-sm border border-gray-100">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Send Us A Message</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">ส่งข้อความถึงเรา</h3>
               <ContactForm />
             </div>
           </div>
@@ -134,7 +134,7 @@ const Contact = () => {
       
       <div className="w-full h-96">
         <iframe
-          title="Office Location"
+          title="ที่ตั้งสำนักงาน"
           className="w-full h-full"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.5468989226047!2d100.52590437675852!3d13.745226197842662!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29ee713f05dbd%3A0x2fafa9db6eb72c23!2sSiam%20Square%20One!5e0!3m2!1sen!2sth!4v1706345543961!5m2!1sen!2sth"
           style={{ border: 0 }}

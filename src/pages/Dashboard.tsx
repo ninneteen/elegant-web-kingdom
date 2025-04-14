@@ -7,28 +7,28 @@ import { ArrowUpRight, BarChart3, Users, FileText, Activity } from "lucide-react
 
 const stats = [
   {
-    title: "Total Users",
+    title: "ผู้ใช้ทั้งหมด",
     value: "1,234",
     change: "+12.3%",
     icon: Users,
     color: "bg-blue-100 text-blue-600",
   },
   {
-    title: "Revenue",
-    value: "$12,345",
+    title: "รายได้",
+    value: "฿12,345",
     change: "+23.1%",
     icon: BarChart3,
     color: "bg-green-100 text-green-600",
   },
   {
-    title: "Active Projects",
+    title: "โปรเจ็กต์ที่กำลังดำเนินการ",
     value: "12",
     change: "+2",
     icon: FileText,
     color: "bg-purple-100 text-purple-600",
   },
   {
-    title: "Conversion Rate",
+    title: "อัตราการเปลี่ยนแปลง",
     value: "3.2%",
     change: "+0.4%",
     icon: Activity,
@@ -39,27 +39,27 @@ const stats = [
 const recentActivity = [
   {
     id: 1,
-    title: "Project X launched",
-    time: "2 hours ago",
-    description: "The team successfully deployed Project X to production.",
+    title: "เปิดตัวโปรเจ็กต์ X",
+    time: "2 ชั่วโมงที่แล้ว",
+    description: "ทีมประสบความสำเร็จในการนำโปรเจ็กต์ X ออกสู่การผลิต",
   },
   {
     id: 2,
-    title: "New team member",
-    time: "Yesterday",
-    description: "John Doe joined the development team.",
+    title: "สมาชิกทีมใหม่",
+    time: "เมื่อวาน",
+    description: "คุณกมล แสนดี เข้าร่วมทีมพัฒนา",
   },
   {
     id: 3,
-    title: "Client meeting",
-    time: "2 days ago",
-    description: "Meeting with client to discuss project requirements.",
+    title: "ประชุมกับลูกค้า",
+    time: "2 วันที่แล้ว",
+    description: "ประชุมกับลูกค้าเพื่อหารือเกี่ยวกับความต้องการของโปรเจ็กต์",
   },
   {
     id: 4,
-    title: "System update",
-    time: "3 days ago",
-    description: "Updated all servers to the latest software version.",
+    title: "อัปเดตระบบ",
+    time: "3 วันที่แล้ว",
+    description: "อัปเดตเซิร์ฟเวอร์ทั้งหมดเป็นซอฟต์แวร์เวอร์ชันล่าสุด",
   },
 ];
 
@@ -81,10 +81,10 @@ const Dashboard = () => {
     <div className="min-h-screen pt-20 pb-10 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="pb-5 border-b border-gray-200 sm:flex sm:items-center sm:justify-between">
-          <h1 className="text-3xl font-bold text-gray-900">Dashboard</h1>
+          <h1 className="text-3xl font-bold text-gray-900">แดชบอร์ด</h1>
           <div className="mt-3 sm:mt-0">
             <p className="text-sm text-gray-500">
-              Welcome back, <span className="font-medium text-gray-900">{user.name}</span>
+              ยินดีต้อนรับกลับ, <span className="font-medium text-gray-900">{user.name}</span>
             </p>
           </div>
         </div>
@@ -116,20 +116,20 @@ const Dashboard = () => {
         <div className="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-6">
           <Card className="lg:col-span-4">
             <CardHeader>
-              <CardTitle>Weekly Overview</CardTitle>
-              <CardDescription>A summary of your weekly performance</CardDescription>
+              <CardTitle>ภาพรวมรายสัปดาห์</CardTitle>
+              <CardDescription>สรุปผลการดำเนินงานประจำสัปดาห์ของคุณ</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="h-80 flex items-center justify-center border border-dashed border-gray-200 rounded-lg">
-                <p className="text-gray-500">Chart placeholder</p>
+                <p className="text-gray-500">ตำแหน่งวางแผนภูมิ</p>
               </div>
             </CardContent>
           </Card>
           
           <Card className="lg:col-span-2">
             <CardHeader>
-              <CardTitle>Recent Activity</CardTitle>
-              <CardDescription>Your recent actions and updates</CardDescription>
+              <CardTitle>กิจกรรมล่าสุด</CardTitle>
+              <CardDescription>การดำเนินการและการอัปเดตล่าสุดของคุณ</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
@@ -150,24 +150,24 @@ const Dashboard = () => {
         <div className="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-2">
           <Card>
             <CardHeader>
-              <CardTitle>Tasks</CardTitle>
-              <CardDescription>Your upcoming tasks</CardDescription>
+              <CardTitle>งาน</CardTitle>
+              <CardDescription>งานที่กำลังจะมาถึงของคุณ</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="h-64 flex items-center justify-center border border-dashed border-gray-200 rounded-lg">
-                <p className="text-gray-500">Task list placeholder</p>
+                <p className="text-gray-500">ตำแหน่งวางรายการงาน</p>
               </div>
             </CardContent>
           </Card>
           
           <Card>
             <CardHeader>
-              <CardTitle>Messages</CardTitle>
-              <CardDescription>Recent messages and notifications</CardDescription>
+              <CardTitle>ข้อความ</CardTitle>
+              <CardDescription>ข้อความและการแจ้งเตือนล่าสุด</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="h-64 flex items-center justify-center border border-dashed border-gray-200 rounded-lg">
-                <p className="text-gray-500">Messages placeholder</p>
+                <p className="text-gray-500">ตำแหน่งวางข้อความ</p>
               </div>
             </CardContent>
           </Card>

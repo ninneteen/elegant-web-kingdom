@@ -19,12 +19,12 @@ const Login = () => {
     <div className="min-h-screen pt-16 bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
-          Sign in to your account
+          เข้าสู่ระบบบัญชีของคุณ
         </h2>
         <p className="mt-2 text-center text-sm text-gray-600">
-          Or{" "}
+          หรือ{" "}
           <Link to="/register" className="font-medium text-primary hover:text-primary/90">
-            create a new account
+            สร้างบัญชีใหม่
           </Link>
         </p>
       </div>
@@ -39,11 +39,11 @@ const Login = () => {
           
           <div className="mb-6">
             <p className="text-sm text-gray-600 mb-2">
-              Use these demo credentials:
+              ใช้ข้อมูลสาธิตเหล่านี้:
             </p>
             <div className="bg-gray-50 rounded p-2 text-sm text-gray-500 font-mono">
-              <p>Email: demo@example.com</p>
-              <p>Password: password</p>
+              <p>อีเมล: demo@example.com</p>
+              <p>รหัสผ่าน: password</p>
             </div>
           </div>
           
@@ -59,7 +59,7 @@ const Login = () => {
                 <div className="w-full border-t border-gray-300" />
               </div>
               <div className="relative flex justify-center text-sm">
-                <span className="px-2 bg-white text-gray-500">Or continue with</span>
+                <span className="px-2 bg-white text-gray-500">หรือเข้าสู่ระบบด้วย</span>
               </div>
             </div>
 
@@ -69,7 +69,7 @@ const Login = () => {
                   type="button"
                   className="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
                 >
-                  <span className="sr-only">Sign in with Google</span>
+                  <span className="sr-only">เข้าสู่ระบบด้วย Google</span>
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path
                       d="M12.545 10.239v3.821h5.445c-.712 2.315-2.647 3.972-5.445 3.972a6.033 6.033 0 110-12.064c1.498 0 2.866.549 3.921 1.453l2.814-2.814A9.969 9.969 0 0012.545 2C7.021 2 2.543 6.477 2.543 12s4.478 10 10.002 10c8.396 0 10.249-7.85 9.426-11.748l-9.426-.013z"
@@ -83,7 +83,7 @@ const Login = () => {
                   type="button"
                   className="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
                 >
-                  <span className="sr-only">Sign in with Facebook</span>
+                  <span className="sr-only">เข้าสู่ระบบด้วย Facebook</span>
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path
                       fillRule="evenodd"

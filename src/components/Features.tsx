@@ -39,18 +39,18 @@ const Features = () => {
     <section className="py-12 bg-white sm:py-16 lg:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:text-center">
-          <h2 className="text-base text-primary font-semibold tracking-wide uppercase">Features</h2>
+          <h2 className="text-base text-primary font-semibold tracking-wide uppercase">คุณสมบัติ</h2>
           <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-            Everything you need to succeed
+            ทุกสิ่งที่คุณต้องการเพื่อความสำเร็จ
           </p>
           <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-            Our comprehensive suite of services and features designed to help your business grow and thrive.
+            บริการและคุณสมบัติที่ครอบคลุมของเรา ออกแบบมาเพื่อช่วยให้ธุรกิจของคุณเติบโตและประสบความสำเร็จ
           </p>
         </div>
 
         <div className="mt-10">
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {features.map((feature, index) => (
+            {features.map((feature) => (
               <div key={feature.name} className="pt-6 h-full">
                 <div className="h-full flow-root bg-gray-50 rounded-lg px-6 pb-8 transform transition duration-500 hover:scale-105 hover:shadow-lg">
                   <div className="-mt-6">
