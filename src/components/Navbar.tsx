@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, User } from "lucide-react";
 import { useAuth } from "@/context/AuthContext";
 
 const Navbar = () => {
@@ -64,8 +64,14 @@ const Navbar = () => {
             {isAuthenticated ? (
               <>
                 <Link to="/dashboard">
-                  <Button variant="ghost" className="ml-4">
+                  <Button variant="ghost" className={`ml-4 ${isActive('/dashboard') ? 'text-primary' : ''}`}>
                     Dashboard
+                  </Button>
+                </Link>
+                <Link to="/profile">
+                  <Button variant="ghost" className={`ml-2 ${isActive('/profile') ? 'text-primary' : ''}`}>
+                    <User className="h-4 w-4 mr-2" />
+                    โปรไฟล์
                   </Button>
                 </Link>
                 <Button 
@@ -144,10 +150,21 @@ const Navbar = () => {
               <>
                 <Link
                   to="/dashboard"
-                  className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary"
+                  className={`block px-3 py-2 rounded-md text-base font-medium ${
+                    isActive('/dashboard') ? 'text-primary' : 'text-gray-700 hover:text-primary'
+                  }`}
                   onClick={closeMenu}
                 >
                   Dashboard
+                </Link>
+                <Link
+                  to="/profile"
+                  className={`block px-3 py-2 rounded-md text-base font-medium ${
+                    isActive('/profile') ? 'text-primary' : 'text-gray-700 hover:text-primary'
+                  }`}
+                  onClick={closeMenu}
+                >
+                  โปรไฟล์
                 </Link>
                 <button
                   onClick={() => {
