@@ -8,9 +8,11 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { UserCog, Settings, LogOut, Palette } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
 import ThemeSelector from "@/components/ThemeSelector";
+import { useTheme } from "@/context/ThemeContext";
 
 const Profile = () => {
   const { user, isAuthenticated, logout } = useAuth();
+  const { currentTheme } = useTheme();
   const navigate = useNavigate();
   const { toast } = useToast();
 
@@ -43,7 +45,13 @@ const Profile = () => {
   };
 
   return (
-    <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+    <div 
+      className={`min-h-screen py-20 px-4 sm:px-6 lg:px-8 ${
+        currentTheme === 'rainbow' 
+          ? 'rainbow-bg' 
+          : 'bg-background'
+      }`}
+    >
       <div className="max-w-4xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Profile Sidebar */}
