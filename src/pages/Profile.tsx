@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "@/context/AuthContext";
@@ -6,8 +5,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { UserCog, Settings, LogOut } from "lucide-react";
+import { UserCog, Settings, LogOut, Palette } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
+import ThemeSelector from "@/components/ThemeSelector";
 
 const Profile = () => {
   const { user, isAuthenticated, logout } = useAuth();
@@ -60,6 +60,7 @@ const Profile = () => {
                   <h3 className="text-xl font-bold">{user.name}</h3>
                   <p className="text-gray-500 mb-4">{user.email}</p>
                   <div className="w-full space-y-2">
+                    <ThemeSelector />
                     <Button 
                       variant="outline" 
                       className="w-full flex items-center justify-center gap-2"
