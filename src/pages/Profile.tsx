@@ -7,10 +7,12 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { UserCog, Settings, LogOut } from "lucide-react";
+import { useToast } from "@/components/ui/use-toast";
 
 const Profile = () => {
   const { user, isAuthenticated, logout } = useAuth();
   const navigate = useNavigate();
+  const { toast } = useToast();
 
   useEffect(() => {
     // Redirect to login if not authenticated
@@ -30,6 +32,14 @@ const Profile = () => {
       .map((n) => n[0])
       .join("")
       .toUpperCase();
+  };
+
+  const handleLogout = () => {
+    logout();
+    toast({
+      title: "ออกจากระบบสำเร็จ",
+      description: "คุณได้ออกจากระบบเรียบร้อยแล้ว",
+    });
   };
 
   return (
@@ -66,9 +76,9 @@ const Profile = () => {
                       ตั้งค่า
                     </Button>
                     <Button 
-                      variant="outline" 
-                      className="w-full flex items-center justify-center gap-2 text-red-500 hover:text-red-600"
-                      onClick={logout}
+                      variant="destructive" 
+                      className="w-full flex items-center justify-center gap-2"
+                      onClick={handleLogout}
                     >
                       <LogOut size={16} />
                       ออกจากระบบ

@@ -8,7 +8,7 @@ import { useAuth } from "@/context/AuthContext";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
-  const { isAuthenticated, logout } = useAuth();
+  const { isAuthenticated } = useAuth();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -74,13 +74,6 @@ const Navbar = () => {
                     โปรไฟล์
                   </Button>
                 </Link>
-                <Button 
-                  variant="outline" 
-                  onClick={logout} 
-                  className="ml-2"
-                >
-                  Logout
-                </Button>
               </>
             ) : (
               <>
@@ -166,15 +159,6 @@ const Navbar = () => {
                 >
                   โปรไฟล์
                 </Link>
-                <button
-                  onClick={() => {
-                    logout();
-                    closeMenu();
-                  }}
-                  className="w-full text-left block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary"
-                >
-                  Logout
-                </button>
               </>
             ) : (
               <>
