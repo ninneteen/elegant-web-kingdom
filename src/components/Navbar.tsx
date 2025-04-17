@@ -4,6 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, User } from "lucide-react";
 import { useAuth } from "@/context/AuthContext";
+import ThemeSelector from "./ThemeSelector";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -61,6 +62,8 @@ const Navbar = () => {
               Contact
             </Link>
             
+            <ThemeSelector />
+            
             {isAuthenticated ? (
               <>
                 <Link to="/dashboard">
@@ -92,7 +95,8 @@ const Navbar = () => {
           </div>
           
           {/* Mobile menu button */}
-          <div className="flex md:hidden items-center">
+          <div className="flex md:hidden items-center space-x-2">
+            <ThemeSelector />
             <button
               onClick={toggleMenu}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-primary focus:outline-none"

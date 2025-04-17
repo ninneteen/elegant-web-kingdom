@@ -31,39 +31,9 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 235 100% 60%;
+    --ring: var(--primary);
 
     --radius: 0.5rem;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 235 100% 60%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 260 100% 65%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 260 100% 25%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 235 100% 60%;
   }
 }
 
@@ -72,8 +42,51 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground transition-colors duration-300;
     font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  .rainbow-theme {
+    --gradient-background: linear-gradient(90deg, 
+      hsl(0, 100%, 75%) 0%, 
+      hsl(39, 100%, 75%) 12.5%, 
+      hsl(60, 100%, 75%) 25%, 
+      hsl(120, 100%, 75%) 37.5%, 
+      hsl(180, 100%, 75%) 50%, 
+      hsl(240, 100%, 75%) 62.5%, 
+      hsl(280, 100%, 75%) 75%, 
+      hsl(320, 100%, 75%) 87.5%, 
+      hsl(360, 100%, 75%) 100%
+    );
+  }
+  
+  .rainbow-theme .bg-primary {
+    background: var(--gradient-background);
+    background-size: 200% 100%;
+    animation: rainbow-bg 10s linear infinite;
+  }
+  
+  .rainbow-theme .text-primary {
+    background: var(--gradient-background);
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: rainbow-bg 10s linear infinite;
+  }
+  
+  .rainbow-theme .border-primary {
+    border-image: var(--gradient-background) 1;
+    border-image-slice: 1;
+  }
+  
+  @keyframes rainbow-bg {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 200% 50%;
+    }
   }
 }
 
