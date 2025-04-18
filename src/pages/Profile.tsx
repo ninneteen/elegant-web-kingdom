@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { UserCog, Settings, LogOut, Palette, Mail, Phone } from "lucide-react";
+import { UserCog, Settings, LogOut, Palette, Mail, Phone, PhoneCall } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
@@ -146,7 +146,10 @@ const Profile = () => {
                       <div>
                         <h4 className="text-sm font-medium text-gray-500">อีเมล</h4>
                         <div className="mt-1 flex items-center gap-4">
-                          <p>{user.email}</p>
+                          <div className="flex items-center gap-2 bg-gray-100 px-3 py-2 rounded-md">
+                            <Mail size={16} className="text-gray-600" />
+                            <span className="text-gray-800 font-medium">{user.email}</span>
+                          </div>
                           <Button 
                             variant={isEmailVerified ? "ghost" : "outline"} 
                             size="sm"
@@ -154,7 +157,6 @@ const Profile = () => {
                             onClick={handleEmailVerification}
                             disabled={isEmailVerified}
                           >
-                            <Mail size={16} />
                             {isEmailVerified ? "ยืนยันแล้ว" : "ยืนยันอีเมล"}
                           </Button>
                         </div>
@@ -162,13 +164,18 @@ const Profile = () => {
                       <div>
                         <h4 className="text-sm font-medium text-gray-500">เบอร์โทรศัพท์</h4>
                         <div className="mt-1 flex items-center gap-4">
-                          <Input
-                            type="tel"
-                            placeholder="กรอกเบอร์โทรศัพท์"
-                            value={phoneNumber}
-                            onChange={(e) => setPhoneNumber(e.target.value)}
-                            className="max-w-[200px]"
-                          />
+                          <div className="flex items-center bg-gray-100 rounded-md overflow-hidden">
+                            <div className="px-3 py-2 bg-gray-200">
+                              <PhoneCall size={16} className="text-gray-600" />
+                            </div>
+                            <Input
+                              type="tel"
+                              placeholder="กรอกเบอร์โทรศัพท์"
+                              value={phoneNumber}
+                              onChange={(e) => setPhoneNumber(e.target.value)}
+                              className="border-none focus:ring-0 bg-transparent w-[200px]"
+                            />
+                          </div>
                           <Button 
                             variant={isPhoneVerified ? "ghost" : "outline"} 
                             size="sm"
@@ -176,7 +183,6 @@ const Profile = () => {
                             onClick={handlePhoneVerification}
                             disabled={isPhoneVerified}
                           >
-                            <Phone size={16} />
                             {isPhoneVerified ? "ยืนยันแล้ว" : "ยืนยันเบอร์โทร"}
                           </Button>
                         </div>
