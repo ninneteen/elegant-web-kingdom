@@ -5,8 +5,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { UserCog, Settings, LogOut, Palette } from "lucide-react";
+import { UserCog, Settings, LogOut, Palette, Mail, Phone } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
+import { Input } from "@/components/ui/input";
+import { useState } from "react";
 import ThemeSelector from "@/components/ThemeSelector";
 import { useTheme } from "@/context/ThemeContext";
 
@@ -15,6 +17,9 @@ const Profile = () => {
   const { currentTheme } = useTheme();
   const navigate = useNavigate();
   const { toast } = useToast();
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [isEmailVerified, setIsEmailVerified] = useState(false);
+  const [isPhoneVerified, setIsPhoneVerified] = useState(false);
 
   useEffect(() => {
     // Redirect to login if not authenticated
@@ -34,6 +39,32 @@ const Profile = () => {
       .map((n) => n[0])
       .join("")
       .toUpperCase();
+  };
+
+  const handleEmailVerification = () => {
+    // Demo implementation - in real app would send verification email
+    setIsEmailVerified(true);
+    toast({
+      title: "ส่งอีเมลยืนยันแล้ว",
+      description: "กรุณาตรวจสอบอีเมลของคุณเพื่อยืนยันตัวตน",
+    });
+  };
+
+  const handlePhoneVerification = () => {
+    if (!phoneNumber) {
+      toast({
+        title: "กรุณากรอกเบอร์โทรศัพท์",
+        description: "คุณต้องกรอกเบอร์โทรศัพท์ก่อนทำการยืนยัน",
+        variant: "destructive",
+      });
+      return;
+    }
+    // Demo implementation - in real app would send SMS verification
+    setIsPhoneVerified(true);
+    toast({
+      title: "ส่ง SMS ยืนยันแล้ว",
+      description: "กรุณาตรวจสอบ SMS ของคุณเพื่อยืนยันตัวตน",
+    });
   };
 
   const handleLogout = () => {
@@ -118,12 +149,46 @@ const Profile = () => {
                   <TabsContent value="account">
                     <div className="space-y-4">
                       <div>
-                        <h4 className="text-sm font-medium text-gray-500">ชื่อผู้ใช้</h4>
-                        <p className="mt-1">{user.name}</p>
+                        <h4 className="text-sm font-medium text-gray-500">อีเมล</h4>
+                        <div className="mt-1 flex items-center gap-4">
+                          <p>{user.email}</p>
+                          <Button 
+                            variant={isEmailVerified ? "ghost" : "outline"} 
+                            size="sm"
+                            className="flex items-center gap-2"
+                            onClick={handleEmailVerification}
+                            disabled={isEmailVerified}
+                          >
+                            <Mail size={16} />
+                            {isEmailVerified ? "ยืนยันแล้ว" : "ยืนยันอีเมล"}
+                          </Button>
+                        </div>
                       </div>
                       <div>
-                        <h4 className="text-sm font-medium text-gray-500">อีเมล</h4>
-                        <p className="mt-1">{user.email}</p>
+                        <h4 className="text-sm font-medium text-gray-500">เบอร์โทรศัพท์</h4>
+                        <div className="mt-1 flex items-center gap-4">
+                          <Input
+                            type="tel"
+                            placeholder="กรอกเบอร์โทรศัพท์"
+                            value={phoneNumber}
+                            onChange={(e) => setPhoneNumber(e.target.value)}
+                            className="max-w-[200px]"
+                          />
+                          <Button 
+                            variant={isPhoneVerified ? "ghost" : "outline"} 
+                            size="sm"
+                            className="flex items-center gap-2"
+                            onClick={handlePhoneVerification}
+                            disabled={isPhoneVerified}
+                          >
+                            <Phone size={16} />
+                            {isPhoneVerified ? "ยืนยันแล้ว" : "ยืนยันเบอร์โทร"}
+                          </Button>
+                        </div>
+                      </div>
+                      <div>
+                        <h4 className="text-sm font-medium text-gray-500">ชื่อผู้ใช้</h4>
+                        <p className="mt-1">{user.name}</p>
                       </div>
                       <div>
                         <h4 className="text-sm font-medium text-gray-500">รหัสผู้ใช้</h4>
