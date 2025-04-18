@@ -22,17 +22,15 @@ const Profile = () => {
   const [isPhoneVerified, setIsPhoneVerified] = useState(false);
 
   useEffect(() => {
-    // Redirect to login if not authenticated
     if (!isAuthenticated) {
       navigate("/login");
     }
   }, [isAuthenticated, navigate]);
 
   if (!isAuthenticated || !user) {
-    return null; // Don't render anything while redirecting
+    return null;
   }
 
-  // Get user initials for avatar fallback
   const getInitials = (name: string) => {
     return name
       .split(" ")
@@ -42,7 +40,6 @@ const Profile = () => {
   };
 
   const handleEmailVerification = () => {
-    // Demo implementation - in real app would send verification email
     setIsEmailVerified(true);
     toast({
       title: "ส่งอีเมลยืนยันแล้ว",
@@ -59,7 +56,6 @@ const Profile = () => {
       });
       return;
     }
-    // Demo implementation - in real app would send SMS verification
     setIsPhoneVerified(true);
     toast({
       title: "ส่ง SMS ยืนยันแล้ว",
@@ -85,7 +81,6 @@ const Profile = () => {
     >
       <div className="max-w-4xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Profile Sidebar */}
           <div className="md:col-span-1">
             <Card>
               <CardContent className="p-6">
@@ -129,7 +124,6 @@ const Profile = () => {
             </Card>
           </div>
 
-          {/* Profile Content */}
           <div className="md:col-span-2">
             <Card>
               <CardHeader>
@@ -144,6 +138,7 @@ const Profile = () => {
                     <TabsTrigger value="account">บัญชี</TabsTrigger>
                     <TabsTrigger value="security">ความปลอดภัย</TabsTrigger>
                     <TabsTrigger value="notifications">การแจ้งเตือน</TabsTrigger>
+                    <TabsTrigger value="privacy">ความเป็นส่วนตัว</TabsTrigger>
                   </TabsList>
                   
                   <TabsContent value="account">
@@ -236,6 +231,20 @@ const Profile = () => {
                         </p>
                         <Button className="mt-4" variant="outline" size="sm">
                           จัดการการตั้งค่าอีเมล
+                        </Button>
+                      </div>
+                    </div>
+                  </TabsContent>
+                  
+                  <TabsContent value="privacy">
+                    <div className="space-y-4">
+                      <div className="border rounded-lg p-4">
+                        <h4 className="font-medium">การเข้าถึงข้อมูล</h4>
+                        <p className="text-sm text-gray-500 mt-1">
+                          จัดการการเข้าถึงข้อมูลส่วนตัวของคุณและการแชร์ข้อมูล
+                        </p>
+                        <Button className="mt-4" variant="outline" size="sm">
+                          ตั้งค่าความเป็นส่วนตัว
                         </Button>
                       </div>
                     </div>
